@@ -1,0 +1,315 @@
+:root {
+  color: #1c1917;
+  background: #f6f3ee;
+  font-family: "Iowan Old Style", Palatino, Georgia, serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+nav a.active {
+  background: #1c1917;
+  color: #f6f3ee;
+}
+
+.lede {
+  max-width: 62ch;
+}
+
+.panel {
+  background: #fffdf9;
+  border: 1px solid #e4ddd2;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1.4fr 1.2fr 0.6fr;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d6cfc3;
+  border-radius: 10px;
+  background: white;
+  color: inherit;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+button {
+  border: 0;
+  background: #1c1917;
+  color: #f6f3ee;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+button.ghost {
+  background: transparent;
+  color: #1c1917;
+  border: 1px solid #d6cfc3;
+}
+
+.error {
+  color: #9f1239;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fffdf9;
+  border: 1px solid #e4ddd2;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee6dc;
+  vertical-align: top;
+}
+
+th {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.jobs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+}
+
+.idea {
+  margin-bottom: 4px;
+  font-size: 1.05rem;
+}
+
+.job-id {
+  margin: 0 0 8px;
+  color: #78716c;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: #e7e5e4;
+}
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.load {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+.load p {
+  margin: 0;
+}
+
+.load-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e7e5e4;
+}
+
+.load-bar {
+  height: 100%;
+  width: 0;
+  background: #1d4ed8;
+  animation-name: load;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load {
+  to {
+    width: 100%;
+  }
+}
+
+.status-queued {
+  background: #fde68a;
+}
+
+.status-processing {
+  background: #bfdbfe;
+}
+
+.status-success {
+  background: #bbf7d0;
+}
+
+.status-failure {
+  background: #fecdd3;
+}
+
+.score {
+  font-size: 1.3rem;
+}
+
+.report h3 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.report ul {
+  margin-top: 0;
+}
+
+dl {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+dt {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+dd {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .top,
+  .job-head,
+  .fields {
+    display: grid;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+}
