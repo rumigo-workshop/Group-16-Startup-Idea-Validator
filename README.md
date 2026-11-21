@@ -1,3 +1,3 @@
 # Group 16: Startup Idea Validator
 
-A founder pitches an idea and receives a validation report with a score out of 100.
+A founder submits an idea and our AI agents return competitors, market size and risks.
