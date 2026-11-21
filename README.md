@@ -1,3 +1,3 @@
 # Group 16: Startup Idea Validator
 
-A founder describes an idea and gets a validation report with competitors, market size, complaints, trends, risks and a score.
+A founder submits an idea and our AI agents return competitors, market size and risks.
